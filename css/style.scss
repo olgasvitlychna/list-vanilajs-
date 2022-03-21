@@ -1,0 +1,192 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 20px;
+  font-weight: 500;
+  font-family: sans-serif;
+}
+
+ul {
+  li {
+    list-style: none;
+  }
+}
+#sectionList {
+  margin: 50px;
+  .listHeader{
+    &:before {
+        content: "+";
+        display: inline-block;
+        margin-right: 5px;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: #0b76ef;
+        color: #fff;
+        line-height: 20px;
+        font-size: 20px;
+        text-align: center;
+      }
+  }
+  .mainSection {
+    position: relative;
+    border-left: 1px solid #000;
+    margin-left: 8px;
+    &:before {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      left: 0;
+      top: 17px;
+      width: 15px;
+      height: 0;
+      border-bottom: 1px solid #000;
+    }
+    &:last-child {
+      border: none;
+      &::after {
+        content: "";
+        position: absolute;
+        height: 17px;
+        width: 1px;
+        top: 0;
+        background-color: #000;
+      }
+    }
+    .mainSectionHeader {
+      padding: 5px;
+      padding-left: 20px;
+      //   border-left: 1px solid red;
+      &:hover {
+        cursor: pointer;
+      }
+
+      &:before {
+        content: "+";
+        display: inline-block;
+        margin-right: 5px;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: #0b76ef;
+        color: #fff;
+        line-height: 20px;
+        font-size: 20px;
+        text-align: center;
+      }
+    }
+    .groupList {
+      margin-left: 28px;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-in-out;
+      .groupSection {
+        position: relative;
+        border-left: 1px solid #000;
+        &:before {
+          content: "";
+          display: inline-block;
+          position: absolute;
+          left: 0;
+          top: 13px;
+          width: 15px;
+          height: 0;
+          border-bottom: 1px solid #000;
+        }
+        &:last-child {
+          border: none;
+          &::after {
+            content: "";
+            position: absolute;
+            height: 13px;
+            width: 1px;
+            top: 0;
+            background-color: #000;
+          }
+        }
+        .groupHeader {
+            margin-left: 45px;
+            position: relative;
+            font-weight: 500;
+          &:before {
+            &:hover {
+              cursor: pointer;
+            }
+            content: "+";
+            display: inline-block;
+            position: absolute;
+            left: -25px;
+            width: 20px;
+            height: 20px;
+            border-radius: 10%;
+            background-color: #0b76ef;
+            color: #fff;
+            line-height: 20px;
+            font-size: 20px;
+            text-align: center;
+            margin-right: 10px;
+          }
+          .groupSpan{
+              display: block;
+          }
+        }
+        .active {
+          &:before {
+            content: "–";
+          }
+        }
+        ul {
+          max-height: 0;
+          overflow: hidden;
+          transition: max-height 0.4s ease-in-out;
+          .subGroupSection{
+            margin-left: 28px;
+            position: relative;
+            border-left: 1px solid #000;
+            &:before {
+              content: "";
+              display: inline-block;
+              position: absolute;
+              left: 0;
+              top: 13px;
+              width: 15px;
+              height: 0;
+              border-bottom: 1px solid #000;
+            }
+            &:last-child {
+              border: none;
+              &::after {
+                content: "";
+                position: absolute;
+                height: 13px;
+                width: 1px;
+                top: 0;
+                background-color: #000;
+              }
+            }
+              .subGroupHeader{
+                  margin-left: 16px;
+                  .subGroupSpan{
+                      display: block;
+                  }
+              }
+          }
+        }
+      }
+    }
+  }
+  .active {
+    .mainSectionHeader {
+      &:before {
+        content: "-";
+      }
+    }
+    .groupList {
+      max-height: 2000px;
+    }
+  }
+}
+.black{
+    background-color: rgba(153, 152, 152, 0.623);
+}

@@ -1,0 +1,183 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 20px;
+  font-weight: 500;
+  font-family: sans-serif;
+}
+
+ul li {
+  list-style: none;
+}
+
+#sectionList {
+  margin: 50px;
+}
+#sectionList .listHeader:before {
+  content: "+";
+  display: inline-block;
+  margin-right: 5px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #0b76ef;
+  color: #fff;
+  line-height: 20px;
+  font-size: 20px;
+  text-align: center;
+}
+#sectionList .mainSection {
+  position: relative;
+  border-left: 1px solid #000;
+  margin-left: 8px;
+}
+#sectionList .mainSection:before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: 17px;
+  width: 15px;
+  height: 0;
+  border-bottom: 1px solid #000;
+}
+#sectionList .mainSection:last-child {
+  border: none;
+}
+#sectionList .mainSection:last-child::after {
+  content: "";
+  position: absolute;
+  height: 17px;
+  width: 1px;
+  top: 0;
+  background-color: #000;
+}
+#sectionList .mainSection .mainSectionHeader {
+  padding: 5px;
+  padding-left: 20px;
+}
+#sectionList .mainSection .mainSectionHeader:hover {
+  cursor: pointer;
+}
+#sectionList .mainSection .mainSectionHeader:before {
+  content: "+";
+  display: inline-block;
+  margin-right: 5px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #0b76ef;
+  color: #fff;
+  line-height: 20px;
+  font-size: 20px;
+  text-align: center;
+}
+#sectionList .mainSection .groupList {
+  margin-left: 28px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+}
+#sectionList .mainSection .groupList .groupSection {
+  position: relative;
+  border-left: 1px solid #000;
+}
+#sectionList .mainSection .groupList .groupSection:before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: 13px;
+  width: 15px;
+  height: 0;
+  border-bottom: 1px solid #000;
+}
+#sectionList .mainSection .groupList .groupSection:last-child {
+  border: none;
+}
+#sectionList .mainSection .groupList .groupSection:last-child::after {
+  content: "";
+  position: absolute;
+  height: 13px;
+  width: 1px;
+  top: 0;
+  background-color: #000;
+}
+#sectionList .mainSection .groupList .groupSection .groupHeader {
+  margin-left: 45px;
+  position: relative;
+  font-weight: 500;
+}
+#sectionList .mainSection .groupList .groupSection .groupHeader:before {
+  content: "+";
+  display: inline-block;
+  position: absolute;
+  left: -25px;
+  width: 20px;
+  height: 20px;
+  border-radius: 10%;
+  background-color: #0b76ef;
+  color: #fff;
+  line-height: 20px;
+  font-size: 20px;
+  text-align: center;
+  margin-right: 10px;
+}
+#sectionList .mainSection .groupList .groupSection .groupHeader:before:hover {
+  cursor: pointer;
+}
+#sectionList .mainSection .groupList .groupSection .groupHeader .groupSpan {
+  display: block;
+}
+#sectionList .mainSection .groupList .groupSection .active:before {
+  content: "–";
+}
+#sectionList .mainSection .groupList .groupSection ul {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-in-out;
+}
+#sectionList .mainSection .groupList .groupSection ul .subGroupSection {
+  margin-left: 28px;
+  position: relative;
+  border-left: 1px solid #000;
+}
+#sectionList .mainSection .groupList .groupSection ul .subGroupSection:before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: 13px;
+  width: 15px;
+  height: 0;
+  border-bottom: 1px solid #000;
+}
+#sectionList .mainSection .groupList .groupSection ul .subGroupSection:last-child {
+  border: none;
+}
+#sectionList .mainSection .groupList .groupSection ul .subGroupSection:last-child::after {
+  content: "";
+  position: absolute;
+  height: 13px;
+  width: 1px;
+  top: 0;
+  background-color: #000;
+}
+#sectionList .mainSection .groupList .groupSection ul .subGroupSection .subGroupHeader {
+  margin-left: 16px;
+}
+#sectionList .mainSection .groupList .groupSection ul .subGroupSection .subGroupHeader .subGroupSpan {
+  display: block;
+}
+#sectionList .active .mainSectionHeader:before {
+  content: "-";
+}
+#sectionList .active .groupList {
+  max-height: 2000px;
+}
+
+.black {
+  background-color: rgba(153, 152, 152, 0.623);
+}/*# sourceMappingURL=style.css.map */
